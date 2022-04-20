@@ -1,0 +1,120 @@
+@import "../../styles/variable";
+
+.navbar {
+  color: #fff;
+  padding: 0 4%;
+  font-size: 14px;
+  font-weight: 400;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(to top, transparent 0%, $bgcolor 100%);
+  transition: all 0.5s ease-in-out;
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      ul {
+        display: flex;
+        list-style: none;
+
+        li {
+          margin-left: 18px;
+          color: #bdbdbd;
+          cursor: pointer;
+        }
+
+        li.active {
+          color: #fff;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      .right_menu__item {
+        display: inherit !important;
+        cursor: pointer;
+
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .right_menu__item:not(.account) {
+        margin-right: 15px;
+      }
+
+      .account {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:hover > .options {
+          display: flex;
+        }
+
+        &:hover > .options__button {
+          transform: rotate(180deg);
+        }
+
+        svg {
+          width: 30px !important;
+          height: 30px !important;
+        }
+
+        svg {
+          cursor: pointer;
+        }
+
+        .options {
+          display: none;
+          position: absolute;
+          flex-direction: column;
+          background: $bgcolor;
+          opacity: 0.85;
+          border: 1px solid grey;
+          text-align: center;
+          top:30px;
+          right: 0;
+          -webkit-transition: all 400ms ease-in;
+          -moz-transition: all 400ms ease-in;
+          -ms-transition: all 400ms ease-in;
+          transition: all 400ms ease-in;
+
+          span {
+            cursor: pointer;
+            padding: 5px 15px;
+          }
+
+          &__button {
+            transition: all 0.2s ease-in;
+          }
+        }
+      }
+    }
+
+    img {
+      height: 25px;
+      cursor: pointer;
+    }
+  }
+}
+
+.SolidBackground {
+  background-color: $bgcolor;
+}

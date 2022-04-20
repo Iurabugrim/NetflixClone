@@ -1,0 +1,17 @@
+@import "../../styles/variable";
+
+.home {
+  background: $bgcolor;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.featured {
+  height: 74vh;
+}
+
+.main {
+  position: relative;
+  z-index: 5;
+}
